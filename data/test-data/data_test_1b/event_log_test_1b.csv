@@ -1,0 +1,6 @@
+DATE,TIME,EVENT
+16-Sep,10:38:10,test start
+16-Sep,10:41:19,load bank 5kW
+16-Sep,10:43:21,load bank 10kW
+16-Sep,10:45:13,load bank 0kW
+16-Sep,10:46:28,test stop

@@ -1,0 +1,6 @@
+DATE,TIME,EVENT
+9/16/2025,12:02,close the battery breaker
+9/16/2025,12:03,load bank 5kW
+9/16/2025,12:07,load bank 10kW
+9/16/2025,12:09,load bank 20kW
+9/16/2025,12:12,open the battery breaker
