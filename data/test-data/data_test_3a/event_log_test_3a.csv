@@ -1,0 +1,12 @@
+DATE,TIME,EVENT
+9/17/2025,8:56:05,test start
+9/17/2025,8:56:21,load profile start
+9/17/2025,9:01:49,grid outage (emulator output off); on BESS (x15)
+9/17/2025,12:23:54,bess 2 ON (x12)
+9/17/2025,13:12:37,added emulator as input to (x12) but overcurrent fault
+9/17/2025,15:14:40,Bess 2 offline???
+9/17/2025,15:19:03,load bank set to manual 30kW
+9/17/2025,15:20:04,Grid back online w/ emulator
+9/17/2025,15:22:11,Load bank set to 0kW
+9/17/2025,15:23:43,emulator off
+9/17/2025,15:24:29,bess 1 (x15) off
