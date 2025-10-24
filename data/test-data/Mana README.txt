@@ -1,0 +1,1 @@
+note that data for the Mana Power is in UTC time
