@@ -1,3 +1,8 @@
 plotly
 pandas
 numpy
+scipy
+kaleido
+jupyter
+nbconvert
+nbformat>=4.2.0

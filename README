@@ -29,3 +29,94 @@ git lfs pull
 ```
 
 For more help, see the [Git LFS documentation](https://github.com/git-lfs/git-lfs/wiki/Tutorial).
+
+## Harmonics Study Script
+
+The harmonics study script performs power quality analysis on mobile battery test data. It calculates harmonic distortion using Fast Fourier Transform (FFT) and compares results against IEEE 519 power quality standards.
+
+### Running the Harmonics Study
+
+To run the harmonics study script:
+
+```bash
+make run-harmonics-study
+```
+
+This will:
+1. Create/activate the virtual environment if needed
+2. Install required dependencies (including scipy for FFT calculations)
+3. Run the harmonics analysis script on test 9B data
+4. Generate visualization plots in PNG format
+
+### Output Files
+
+The script generates the following output files in `results/harmonics_study/`:
+
+- `harmonics_study_raw_data.png`: Visualization of raw waveform data, PMU measurements, and loadbank profile
+- `harmonics_study_harmonics.png`: Harmonic spectrum analysis with IEEE 519 compliance comparison
+
+### Script Location
+
+The harmonics study script is located at: `src/temp/harmonics-study.py`
+
+### Data Sources
+
+The script processes data from test 9B:
+- **Axion CSV**: High-frequency waveform data (current measurements for Phase A, B, C)
+- **PMU CSV**: Phasor measurement unit data (voltage and power measurements)
+- **Loadbank Log**: Loadbank operational data
+- **Event Log**: Test event timeline
+
+All timestamps are converted from UTC to San Diego timezone (America/Los_Angeles) for analysis.
+
+## Harmonics Study Notebook
+
+The harmonics study is also available as a Jupyter notebook for interactive analysis and exploration.
+
+### Running the Harmonics Study Notebook
+
+To run the harmonics study notebook:
+
+```bash
+make run-harmonics-notebook
+```
+
+This will:
+1. Create/activate the virtual environment if needed
+2. Install required dependencies (including jupyter and nbconvert)
+3. Execute the notebook and generate an executed version
+
+### Interactive Notebook Usage
+
+For interactive use, you can launch Jupyter and open the notebook:
+
+```bash
+# Activate virtual environment
+source .venv/Scripts/activate  # On Windows Git Bash
+# or
+.venv\Scripts\activate  # On Windows PowerShell
+
+# Install dependencies
+pip install -r requirements.txt
+pip install jupyter
+
+# Launch Jupyter
+jupyter notebook src/temp/harmonics-study.ipynb
+```
+
+The notebook is located at: `src/temp/harmonics-study.ipynb`
+
+### Notebook Features
+
+The notebook provides the same functionality as the script but with:
+- Interactive cell-by-cell execution
+- Ability to modify parameters and re-run specific sections
+- Inline visualization of plots
+- Easy exploration of intermediate results
+
+### Additional Output Files
+
+When running the notebook, it generates the same output files as the script:
+- `harmonics_study_raw_data.png`: Raw data visualization
+- `harmonics_study_harmonics.png`: Harmonic spectrum analysis
+- `harmonics_study_time_variation.png`: Time-varying harmonics analysis (new in enhanced version)
