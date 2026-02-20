@@ -1,6 +1,6 @@
 VENV_DIR := .venv
 
-.PHONY: clean run-pmu-reader run-harmonics-study run-harmonics-notebook
+.PHONY: clean run-pmu-reader run-harmonics-study run-harmonics-notebook compare-battery-grid-harmonics
 
 clean:
 	rm -rf $(VENV_DIR) temp/ results/
@@ -37,3 +37,7 @@ run-harmonics-notebook:
 	@bash -c "source $(VENV_DIR)/Scripts/activate && python -m pip install --upgrade pip && pip install -r requirements.txt && pip install jupyter nbconvert"
 	@echo "Running harmonics study notebook..."
 	@bash -c "source $(VENV_DIR)/Scripts/activate && cd src/temp && jupyter nbconvert --to notebook --execute harmonics-study.ipynb --output harmonics-study-executed.ipynb"
+
+compare-battery-grid-harmonics:
+	@echo "Comparing battery vs grid harmonics (requires JSON from 9B and 9C notebooks)..."
+	@bash -c "source $(VENV_DIR)/Scripts/activate 2>/dev/null || true && python src/analysis/compare_battery_grid_harmonics.py"

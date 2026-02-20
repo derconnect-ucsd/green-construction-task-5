@@ -120,3 +120,40 @@ When running the notebook, it generates the same output files as the script:
 - `harmonics_study_raw_data.png`: Raw data visualization
 - `harmonics_study_harmonics.png`: Harmonic spectrum analysis
 - `harmonics_study_time_variation.png`: Time-varying harmonics analysis (new in enhanced version)
+
+## Battery vs Grid Harmonics Comparison
+
+To determine the harmonics produced by the mobile battery (vs. the load bank), run the following workflow:
+
+### 1. Run Both Harmonics Study Notebooks
+
+Execute the full notebooks for Test 9B (Moxion battery) and Test 9C (Grid only):
+
+- `src/analysis/harmonics-study_test_9B_moxion.ipynb` – Battery supplying load bank
+- `src/analysis/harmonics-study_test_9C.ipynb` – Grid supplying load bank
+
+Each notebook includes a "Battery vs Grid Harmonics" extraction cell that saves results to:
+- `results/harmonics_study/battery_vs_grid_harmonics_9B.json`
+- `results/harmonics_study/battery_vs_grid_harmonics_9C.json`
+
+### 2. Run the Comparison Script
+
+After both notebooks have been executed:
+
+```bash
+make compare-battery-grid-harmonics
+```
+
+Or directly:
+
+```bash
+python src/analysis/compare_battery_grid_harmonics.py
+```
+
+### 3. Interpret the Results
+
+The comparison script prints a report to the console and saves a figure to `results/harmonics_study/battery_vs_grid_harmonics_comparison.png`. The figure includes:
+
+- **Section 1 – No-load voltage harmonics**: Bar chart comparing inherent source distortion (9B vs. 9C). Higher values in 9B indicate the battery adds more voltage distortion.
+- **Section 2 – Loaded conditions**: Bar chart comparing voltage THD at the same load bank settings. Higher 9B values suggest the battery has higher output impedance.
+- **Section 3 – Summary**: Table describing how to interpret battery vs. load bank harmonics.

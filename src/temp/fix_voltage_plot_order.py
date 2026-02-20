@@ -1,0 +1,122 @@
+"""Move Plot 5 (worst case table) before fig.show() using raw text replacement."""
+nb_path = r"c:\Users\kchia\Documents\Github\green-construction-task-5\src\analysis\harmonics-study_test_9B_moxion.ipynb"
+
+with open(nb_path, "r", encoding="utf-8") as f:
+    text = f.read()
+
+# Unique anchor: only in plot_voltage_harmonics_vs_time we have this exact sequence
+# (voltage_time_variation in output path + Plot 5 after export)
+old_block = '''        "    \\n",
+        "    \\n",
+        "    # Display figure in notebook\\n",
+        "    try:\\n",
+        "        fig.show()\\n",
+        "    except ValueError as e:\\n",
+        "        if \\"nbformat\\" in str(e):\\n",
+        "            print(\\"Note: Install nbformat>=4.2.0 to display figures in notebook: pip install nbformat>=4.2.0\\")\\n",
+        "        else:\\n",
+        "            print(f\\"Note: Could not display figure in notebook: {e}\\")\\n",
+        "    \\n",
+        "    # Export as PNG\\n",
+        "    output_file = os.path.join(OUTPUT_DIR, f\\"harmonics_study_voltage_time_variation_{TEST_ID}.png\\")\\n",
+        "    try:\\n",
+        "        pio.write_image(fig, output_file, width=1600, height=1400, scale=2)\\n",
+        "        print(f\\"Voltage time variation plot saved to: {output_file}\\")\\n",
+        "    except Exception as e:\\n",
+        "        print(f\\"Warning: Could not export PNG image: {e}\\")\\n",
+        "        print(\\"Make sure kaleido is installed: pip install kaleido\\")\\n",
+        "        # Save as HTML as fallback\\n",
+        "        html_file = output_file.replace('.png', '.html')\\n",
+        "        fig.write_html(html_file)\\n",
+        "        print(f\\"Saved as HTML instead: {html_file}\\")\\n",
+        "    \\n",
+        "\\n",
+        "    # Plot 5: Worst case summary table\\n",
+        "    if worst_case_voltage is not None and isinstance(worst_case_voltage, dict):\\n",
+        "        table_data = []\\n",
+        "        table_data.append(['Phase', worst_case_voltage.get('phase', 'N/A')])\\n",
+        "        table_data.append(['Timestamp', str(worst_case_voltage.get('timestamp', 'N/A'))])\\n",
+        "        table_data.append(['Max THD', f\\"{worst_case_voltage.get('max_thd', 0):.2f}%\\"])\\n",
+        "        \\n",
+        "        top_harmonics = worst_case_voltage.get('top_harmonics', {})\\n",
+        "        if top_harmonics:\\n",
+        "            harmonics_str = ', '.join([f\\"{k}: {v:.1f}%\\" for k, v in sorted(top_harmonics.items(), key=lambda x: x[1], reverse=True)[:3]])\\n",
+        "            table_data.append(['Top Harmonics', harmonics_str])\\n",
+        "        \\n",
+        "        load_cond = worst_case_voltage.get('load_condition')\\n",
+        "        if load_cond:\\n",
+        "            table_data.append(['Load Condition', f\\"R={load_cond.get('R_kw', 0):.1f}kW, L={load_cond.get('L_kvar', 0):.1f}kVAR, C={load_cond.get('C_kvar', 0):.1f}kVAR\\"])\\n",
+        "        \\n",
+        "        fig.add_trace(\\n",
+        "            go.Table(\\n",
+        "                header=dict(values=['Metric', 'Value'], fill_color='lightblue', align='left', font=dict(size=12)),\\n",
+        "                cells=dict(values=list(zip(*table_data)), fill_color='white', align='left', font=dict(size=11)),\\n",
+        "                columnwidth=[0.3, 0.7]\\n",
+        "            ),\\n",
+        "            row=5, col=1\\n",
+        "        )\\n",
+        "    \\n",
+        "    \\n",
+        "    return fig\\n"'''
+
+new_block = '''        "    \\n",
+        "    # Plot 5: Worst case summary table (before show/write so one figure with table)\\n",
+        "    if worst_case_voltage is not None and isinstance(worst_case_voltage, dict):\\n",
+        "        table_data = []\\n",
+        "        table_data.append(['Phase', worst_case_voltage.get('phase', 'N/A')])\\n",
+        "        table_data.append(['Timestamp', str(worst_case_voltage.get('timestamp', 'N/A'))])\\n",
+        "        table_data.append(['Max THD', f\\"{worst_case_voltage.get('max_thd', 0):.2f}%\\"])\\n",
+        "        \\n",
+        "        top_harmonics = worst_case_voltage.get('top_harmonics', {})\\n",
+        "        if top_harmonics:\\n",
+        "            harmonics_str = ', '.join([f\\"{k}: {v:.1f}%\\" for k, v in sorted(top_harmonics.items(), key=lambda x: x[1], reverse=True)[:3]])\\n",
+        "            table_data.append(['Top Harmonics', harmonics_str])\\n",
+        "        \\n",
+        "        load_cond = worst_case_voltage.get('load_condition')\\n",
+        "        if load_cond:\\n",
+        "            table_data.append(['Load Condition', f\\"R={load_cond.get('R_kw', 0):.1f}kW, L={load_cond.get('L_kvar', 0):.1f}kVAR, C={load_cond.get('C_kvar', 0):.1f}kVAR\\"])\\n",
+        "        \\n",
+        "        fig.add_trace(\\n",
+        "            go.Table(\\n",
+        "                header=dict(values=['Metric', 'Value'], fill_color='lightblue', align='left', font=dict(size=12)),\\n",
+        "                cells=dict(values=list(zip(*table_data)), fill_color='white', align='left', font=dict(size=11)),\\n",
+        "                columnwidth=[0.3, 0.7]\\n",
+        "            ),\\n",
+        "            row=5, col=1\\n",
+        "        )\\n",
+        "    \\n",
+        "    # Display figure in notebook\\n",
+        "    try:\\n",
+        "        fig.show()\\n",
+        "    except ValueError as e:\\n",
+        "        if \\"nbformat\\" in str(e):\\n",
+        "            print(\\"Note: Install nbformat>=4.2.0 to display figures in notebook: pip install nbformat>=4.2.0\\")\\n",
+        "        else:\\n",
+        "            print(f\\"Note: Could not display figure in notebook: {e}\\")\\n",
+        "    \\n",
+        "    # Export as PNG\\n",
+        "    output_file = os.path.join(OUTPUT_DIR, f\\"harmonics_study_voltage_time_variation_{TEST_ID}.png\\")\\n",
+        "    try:\\n",
+        "        pio.write_image(fig, output_file, width=1600, height=1400, scale=2)\\n",
+        "        print(f\\"Voltage time variation plot saved to: {output_file}\\")\\n",
+        "    except Exception as e:\\n",
+        "        print(f\\"Warning: Could not export PNG image: {e}\\")\\n",
+        "        print(\\"Make sure kaleido is installed: pip install kaleido\\")\\n",
+        "        # Save as HTML as fallback\\n",
+        "        html_file = output_file.replace('.png', '.html')\\n",
+        "        fig.write_html(html_file)\\n",
+        "        print(f\\"Saved as HTML instead: {html_file}\\")\\n",
+        "    \\n",
+        "    return fig\\n"'''
+
+if old_block not in text:
+    print("Old block not found - checking raw lines...")
+    # Try to find a smaller unique substring
+    if 'harmonics_study_voltage_time_variation_{TEST_ID}.png' in text and '    # Plot 5: Worst case summary table' in text:
+        print("Key strings present; block format may differ.")
+    exit(1)
+
+text = text.replace(old_block, new_block, 1)
+with open(nb_path, "w", encoding="utf-8") as f:
+    f.write(text)
+print("Done: moved Plot 5 before fig.show() so only one figure (with table) is shown.")

@@ -1,0 +1,134 @@
+{
+  "test_id": "9C",
+  "source": "Grid only",
+  "no_load": {
+    "voltage_thd_max": 3.138355917106079,
+    "voltage_thd_mean": 2.355240965844038,
+    "voltage_thd_min": 2.1445738085563355,
+    "current_thd_max": 3404.631951438754,
+    "n_points": 1191
+  },
+  "loaded_conditions": {
+    "R0kW_L0kVAR_C15kVAR": {
+      "voltage_thd_max": 2.4076141129570394,
+      "voltage_thd_mean": 2.3241242186637003,
+      "current_thd_max": 734.6157206465907,
+      "n_points": 66
+    },
+    "R0kW_L0kVAR_C30kVAR": {
+      "voltage_thd_max": 2.626659882271201,
+      "voltage_thd_mean": 2.451224060812259,
+      "current_thd_max": 51.93833291334146,
+      "n_points": 66
+    },
+    "R0kW_L0kVAR_C45kVAR": {
+      "voltage_thd_max": 2.684649257891671,
+      "voltage_thd_mean": 2.574855080160047,
+      "current_thd_max": 45.744520812207,
+      "n_points": 66
+    },
+    "R0kW_L0kVAR_C60kVAR": {
+      "voltage_thd_max": 2.9791765486475694,
+      "voltage_thd_mean": 2.889899096788379,
+      "current_thd_max": 38.15148459492449,
+      "n_points": 66
+    },
+    "R0kW_L0kVAR_C75kVAR": {
+      "voltage_thd_max": 3.1738901470355665,
+      "voltage_thd_mean": 3.1030771640259585,
+      "current_thd_max": 38.56507702843944,
+      "n_points": 66
+    },
+    "R0kW_L15kVAR_C0kVAR": {
+      "voltage_thd_max": 2.232139329477894,
+      "voltage_thd_mean": 2.183179055053151,
+      "current_thd_max": 436.1226882671376,
+      "n_points": 66
+    },
+    "R0kW_L30kVAR_C0kVAR": {
+      "voltage_thd_max": 2.2589960861347014,
+      "voltage_thd_mean": 2.1860244349662743,
+      "current_thd_max": 1.7585181657114117,
+      "n_points": 66
+    },
+    "R0kW_L45kVAR_C0kVAR": {
+      "voltage_thd_max": 2.2897163801108946,
+      "voltage_thd_mean": 2.2277433742787203,
+      "current_thd_max": 2.034212291478096,
+      "n_points": 66
+    },
+    "R0kW_L60kVAR_C0kVAR": {
+      "voltage_thd_max": 2.317870441662978,
+      "voltage_thd_mean": 2.2682320594839878,
+      "current_thd_max": 1.9053934643659813,
+      "n_points": 66
+    },
+    "R0kW_L75kVAR_C0kVAR": {
+      "voltage_thd_max": 2.332154403123412,
+      "voltage_thd_mean": 2.2851032233708573,
+      "current_thd_max": 1.1594560033681898,
+      "n_points": 66
+    },
+    "R15kW_L0kVAR_C0kVAR": {
+      "voltage_thd_max": 2.2960280231140615,
+      "voltage_thd_mean": 2.2405028182643068,
+      "current_thd_max": 5.552795210394605,
+      "n_points": 66
+    },
+    "R30kW_L0kVAR_C0kVAR": {
+      "voltage_thd_max": 2.2918329796512773,
+      "voltage_thd_mean": 2.245358933960624,
+      "current_thd_max": 2.333426213401145,
+      "n_points": 66
+    },
+    "R45kW_L0kVAR_C0kVAR": {
+      "voltage_thd_max": 2.2912114898386546,
+      "voltage_thd_mean": 2.2364667611295928,
+      "current_thd_max": 2.2987441654983534,
+      "n_points": 66
+    },
+    "R60kW_L0kVAR_C0kVAR": {
+      "voltage_thd_max": 2.2627437060959763,
+      "voltage_thd_mean": 2.2153096264514875,
+      "current_thd_max": 2.366772600133467,
+      "n_points": 66
+    },
+    "R75kW_L0kVAR_C0kVAR": {
+      "voltage_thd_max": 2.250362821774468,
+      "voltage_thd_mean": 2.2050849503840575,
+      "current_thd_max": 2.343524136188602,
+      "n_points": 66
+    }
+  },
+  "has_no_load_data": true,
+  "no_load_detail": {
+    "n_windows": 1191,
+    "voltage_thd_mean": 2.355240965844038,
+    "voltage_thd_max": 3.138355917106079,
+    "voltage_thd_min": 2.1445738085563355,
+    "by_phase": {
+      "PhaseA": {
+        "mean": 2.3092594236219974,
+        "max": 3.0651857995969314,
+        "min": 2.1445738085563355
+      },
+      "PhaseB": {
+        "mean": 2.384582204239661,
+        "max": 3.136254638014847,
+        "min": 2.2180610499344944
+      },
+      "PhaseC": {
+        "mean": 2.3718812696704545,
+        "max": 3.138355917106079,
+        "min": 2.2127952988284365
+      }
+    },
+    "dominant_harmonics": {
+      "H5": 1.8135615708210642,
+      "H11": 1.0702194225520183,
+      "H7": 0.7920357484261308,
+      "H13": 0.5252399785208393,
+      "H17": 0.26965821244123367
+    }
+  }
+}

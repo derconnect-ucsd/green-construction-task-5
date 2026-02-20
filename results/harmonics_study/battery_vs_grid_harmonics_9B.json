@@ -1,0 +1,206 @@
+{
+  "test_id": "9B",
+  "source": "Moxion battery",
+  "no_load": {
+    "voltage_thd_max": 1.6027667355317896,
+    "voltage_thd_mean": 1.3957813581472136,
+    "voltage_thd_min": 0.7217333238991049,
+    "current_thd_max": 2637.5120883621516,
+    "n_points": 444
+  },
+  "loaded_conditions": {
+    "R75kW_L0kVAR_C0kVAR": {
+      "voltage_thd_max": 3.2692372530023874,
+      "voltage_thd_mean": 1.3950386390906895,
+      "current_thd_max": 2949.4853581406796,
+      "n_points": 294
+    },
+    "R0kW_L0kVAR_C75kVAR": {
+      "voltage_thd_max": 3.040186403134075,
+      "voltage_thd_mean": 2.706178986083646,
+      "current_thd_max": 1992.43989222506,
+      "n_points": 66
+    },
+    "R0kW_L0kVAR_C60kVAR": {
+      "voltage_thd_max": 2.8404604236743727,
+      "voltage_thd_mean": 1.8472303267966768,
+      "current_thd_max": 49.862551383769286,
+      "n_points": 159
+    },
+    "R0kW_L0kVAR_C45kVAR": {
+      "voltage_thd_max": 2.1981543881731995,
+      "voltage_thd_mean": 1.9883467721885215,
+      "current_thd_max": 18.047341704518193,
+      "n_points": 63
+    },
+    "R0kW_L0kVAR_C30kVAR": {
+      "voltage_thd_max": 2.004396688002528,
+      "voltage_thd_mean": 1.697282740424364,
+      "current_thd_max": 394.43247804247795,
+      "n_points": 204
+    },
+    "R0kW_L60kVAR_C0kVAR": {
+      "voltage_thd_max": 1.9640362830232205,
+      "voltage_thd_mean": 1.60054144146636,
+      "current_thd_max": 64.38554139140088,
+      "n_points": 87
+    },
+    "R0kW_L30kVAR_C0kVAR": {
+      "voltage_thd_max": 1.7724017426165226,
+      "voltage_thd_mean": 1.469190189613747,
+      "current_thd_max": 3.409303693693422,
+      "n_points": 231
+    },
+    "R60kW_L45kVAR_C0kVAR": {
+      "voltage_thd_max": 1.532023306714384,
+      "voltage_thd_mean": 1.1457863474733203,
+      "current_thd_max": 436.96385462779057,
+      "n_points": 12
+    },
+    "R45kW_L45kVAR_C0kVAR": {
+      "voltage_thd_max": 1.5038061544337358,
+      "voltage_thd_mean": 1.17172385959255,
+      "current_thd_max": 380.2243904144056,
+      "n_points": 6
+    },
+    "R75kW_L30kVAR_C0kVAR": {
+      "voltage_thd_max": 1.503070867430434,
+      "voltage_thd_mean": 1.308148397318445,
+      "current_thd_max": 212.2347842623883,
+      "n_points": 18
+    },
+    "R60kW_L60kVAR_C0kVAR": {
+      "voltage_thd_max": 1.5022956968973824,
+      "voltage_thd_mean": 1.0000141840538987,
+      "current_thd_max": 251.05195216303758,
+      "n_points": 12
+    },
+    "R60kW_L30kVAR_C0kVAR": {
+      "voltage_thd_max": 1.5013846063757834,
+      "voltage_thd_mean": 1.2147819638198554,
+      "current_thd_max": 1124.9187480340795,
+      "n_points": 18
+    },
+    "R60kW_L0kVAR_C0kVAR": {
+      "voltage_thd_max": 1.4678780407493763,
+      "voltage_thd_mean": 1.2106948171996488,
+      "current_thd_max": 14.16318938649514,
+      "n_points": 90
+    },
+    "R45kW_L15kVAR_C0kVAR": {
+      "voltage_thd_max": 1.3796294453330467,
+      "voltage_thd_mean": 1.088863003176476,
+      "current_thd_max": 8.211923665026772,
+      "n_points": 27
+    },
+    "R45kW_L0kVAR_C0kVAR": {
+      "voltage_thd_max": 1.3032609735864573,
+      "voltage_thd_mean": 1.2065009701354263,
+      "current_thd_max": 1.9322527921633585,
+      "n_points": 105
+    },
+    "R15kW_L0kVAR_C0kVAR": {
+      "voltage_thd_max": 1.2981658246368408,
+      "voltage_thd_mean": 1.1675444620744158,
+      "current_thd_max": 2.6704289628501607,
+      "n_points": 96
+    },
+    "R45kW_L0kVAR_C15kVAR": {
+      "voltage_thd_max": 1.289739209672232,
+      "voltage_thd_mean": 1.1122375578669002,
+      "current_thd_max": 6.642794086964485,
+      "n_points": 12
+    },
+    "R30kW_L0kVAR_C0kVAR": {
+      "voltage_thd_max": 1.2889124291867202,
+      "voltage_thd_mean": 1.1778952078365736,
+      "current_thd_max": 2.6093599896179067,
+      "n_points": 102
+    },
+    "R15kW_L15kVAR_C0kVAR": {
+      "voltage_thd_max": 1.284016917877392,
+      "voltage_thd_mean": 1.1197101438102113,
+      "current_thd_max": 8.339744259553719,
+      "n_points": 27
+    },
+    "R60kW_L0kVAR_C15kVAR": {
+      "voltage_thd_max": 1.2089625563702566,
+      "voltage_thd_mean": 1.1644255210418246,
+      "current_thd_max": 5.646673406849788,
+      "n_points": 6
+    },
+    "R30kW_L0kVAR_C30kVAR": {
+      "voltage_thd_max": 1.2000349387858857,
+      "voltage_thd_mean": 1.06175172266158,
+      "current_thd_max": 8.389993131160752,
+      "n_points": 18
+    },
+    "R45kW_L0kVAR_C30kVAR": {
+      "voltage_thd_max": 1.1958833747205544,
+      "voltage_thd_mean": 1.1275831819422548,
+      "current_thd_max": 8.15777956893859,
+      "n_points": 12
+    },
+    "R15kW_L0kVAR_C15kVAR": {
+      "voltage_thd_max": 1.1817780816273404,
+      "voltage_thd_mean": 1.0850377564837113,
+      "current_thd_max": 8.38618032985607,
+      "n_points": 36
+    },
+    "R30kW_L0kVAR_C15kVAR": {
+      "voltage_thd_max": 1.1766643266289478,
+      "voltage_thd_mean": 1.111306739183475,
+      "current_thd_max": 7.6141262566728845,
+      "n_points": 12
+    },
+    "R45kW_L0kVAR_C45kVAR": {
+      "voltage_thd_max": 1.1039734867579263,
+      "voltage_thd_mean": 1.0769335880345594,
+      "current_thd_max": 7.90637158180241,
+      "n_points": 6
+    },
+    "R45kW_L30kVAR_C0kVAR": {
+      "voltage_thd_max": 1.0603732202167855,
+      "voltage_thd_mean": 0.9305613918163997,
+      "current_thd_max": 1.5457806989990777,
+      "n_points": 6
+    },
+    "R30kW_L30kVAR_C0kVAR": {
+      "voltage_thd_max": 1.0050897094205964,
+      "voltage_thd_mean": 0.8665933826552744,
+      "current_thd_max": 2.1412155894759994,
+      "n_points": 12
+    }
+  },
+  "has_no_load_data": true,
+  "no_load_detail": {
+    "n_windows": 444,
+    "voltage_thd_mean": 1.3957813581472136,
+    "voltage_thd_max": 1.6027667355317896,
+    "voltage_thd_min": 0.7217333238991049,
+    "by_phase": {
+      "PhaseA": {
+        "mean": 1.3899213929357461,
+        "max": 1.5394674746149917,
+        "min": 0.7336205432080803
+      },
+      "PhaseB": {
+        "mean": 1.4128945950429455,
+        "max": 1.5622767296255191,
+        "min": 0.7325650601377355
+      },
+      "PhaseC": {
+        "mean": 1.3845280864629494,
+        "max": 1.6027667355317896,
+        "min": 0.7217333238991049
+      }
+    },
+    "dominant_harmonics": {
+      "H5": 1.1717786185881942,
+      "H7": 0.6098162288576496,
+      "H11": 0.2535422024058756,
+      "H4": 0.22900188344028907,
+      "H13": 0.17623717399442224
+    }
+  }
+}
